@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Granulify GODF Architecture</title>
+  <desc id="desc">Architecture flow from ingestion modules through scoring engine to decision analyzer recommendations.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="58%" stop-color="#f2f7fb"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <linearGradient id="ingestion" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="scoring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="decision" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 18px Arial, Helvetica, sans-serif; fill: #475569; }
+      .card-title { font: 700 25px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .card-subtitle { font: 500 14px Arial, Helvetica, sans-serif; fill: rgba(255,255,255,0.84); letter-spacing: 1.4px; }
+      .body-title { font: 700 17px Arial, Helvetica, sans-serif; fill: #0f172a; }
+      .body-copy { font: 400 15px Arial, Helvetica, sans-serif; fill: #475569; }
+      .metric { font: 700 15px Arial, Helvetica, sans-serif; fill: #334155; }
+      .pill { font: 700 16px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .flow-label { font: 700 13px Arial, Helvetica, sans-serif; fill: #334155; }
+      .small { font: 400 12px Arial, Helvetica, sans-serif; fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="760" rx="34" fill="url(#background)"/>
+  <circle cx="1020" cy="112" r="118" fill="#fed7aa" opacity="0.42"/>
+  <circle cx="156" cy="630" r="140" fill="#bfdbfe" opacity="0.48"/>
+  <circle cx="998" cy="624" r="108" fill="#ddd6fe" opacity="0.38"/>
+
+  <text x="600" y="72" text-anchor="middle" class="title">Granulify / GODF Architecture</text>
+  <text x="600" y="104" text-anchor="middle" class="subtitle">Evidence-driven microservice granularity decisions from code, runtime, and team signals</text>
+
+  <g filter="url(#shadow)">
+    <rect x="78" y="168" width="296" height="376" rx="24" fill="#ffffff"/>
+    <rect x="78" y="168" width="296" height="94" rx="24" fill="url(#ingestion)"/>
+    <path d="M78 238 H374 V262 H78 Z" fill="url(#ingestion)"/>
+    <text x="226" y="208" text-anchor="middle" class="card-subtitle">STAGE 01</text>
+    <text x="226" y="240" text-anchor="middle" class="card-title">Ingestion</text>
+
+    <rect x="110" y="296" width="232" height="58" rx="12" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="132" y="320" class="body-title">static_parser.py</text>
+    <text x="132" y="342" class="body-copy">Structural coupling</text>
+
+    <rect x="110" y="374" width="232" height="58" rx="12" fill="#ecfdf5" stroke="#99f6e4"/>
+    <text x="132" y="398" class="body-title">runtime_monitor.py</text>
+    <text x="132" y="420" class="body-copy">Latency and trace frequency</text>
+
+    <rect x="110" y="452" width="232" height="58" rx="12" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="132" y="476" class="body-title">git_analyzer.py</text>
+    <text x="132" y="498" class="body-copy">Authorship and ownership</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="452" y="168" width="296" height="376" rx="24" fill="#ffffff"/>
+    <rect x="452" y="168" width="296" height="94" rx="24" fill="url(#scoring)"/>
+    <path d="M452 238 H748 V262 H452 Z" fill="url(#scoring)"/>
+    <text x="600" y="208" text-anchor="middle" class="card-subtitle">STAGE 02</text>
+    <text x="600" y="240" text-anchor="middle" class="card-title">Scoring Engine</text>
+
+    <rect x="486" y="296" width="228" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="600" y="323" text-anchor="middle" class="metric">DDD Alignment</text>
+
+    <rect x="486" y="350" width="228" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="600" y="377" text-anchor="middle" class="metric">Technical Coupling</text>
+
+    <rect x="486" y="404" width="228" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="600" y="431" text-anchor="middle" class="metric">Team Autonomy</text>
+
+    <rect x="486" y="458" width="228" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="600" y="485" text-anchor="middle" class="metric">RVI + Elasticity</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="826" y="168" width="296" height="376" rx="24" fill="#ffffff"/>
+    <rect x="826" y="168" width="296" height="94" rx="24" fill="url(#decision)"/>
+    <path d="M826 238 H1122 V262 H826 Z" fill="url(#decision)"/>
+    <text x="974" y="208" text-anchor="middle" class="card-subtitle">STAGE 03</text>
+    <text x="974" y="240" text-anchor="middle" class="card-title">Decision Analyzer</text>
+
+    <rect x="872" y="306" width="204" height="54" rx="27" fill="#dc2626"/>
+    <text x="974" y="340" text-anchor="middle" class="pill">SPLIT</text>
+
+    <rect x="872" y="386" width="204" height="54" rx="27" fill="#2563eb"/>
+    <text x="974" y="420" text-anchor="middle" class="pill">MERGE</text>
+
+    <rect x="872" y="466" width="204" height="54" rx="27" fill="#0f766e"/>
+    <text x="974" y="500" text-anchor="middle" class="pill">MAINTAIN</text>
+  </g>
+
+  <path d="M382 356 C410 356 420 356 444 356" fill="none" stroke="#334155" stroke-width="3.2" marker-end="url(#arrow)"/>
+  <path d="M756 356 C784 356 794 356 818 356" fill="none" stroke="#334155" stroke-width="3.2" marker-end="url(#arrow)"/>
+
+  <rect x="389" y="318" width="48" height="28" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="413" y="337" text-anchor="middle" class="flow-label">data</text>
+
+  <rect x="762" y="318" width="64" height="28" rx="14" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="794" y="337" text-anchor="middle" class="flow-label">scores</text>
+
+  <g>
+    <rect x="218" y="608" width="764" height="76" rx="20" fill="#ffffff" opacity="0.92" stroke="#e2e8f0"/>
+    <text x="600" y="638" text-anchor="middle" class="body-title">Optimization Loop</text>
+    <text x="600" y="664" text-anchor="middle" class="body-copy">Continuously compare architecture intent with observed coupling, runtime pressure, and team ownership.</text>
+  </g>
+
+  <text x="600" y="724" text-anchor="middle" class="small">Granulify transforms multi-signal architecture evidence into actionable boundary recommendations.</text>
+</svg>

@@ -53,34 +53,12 @@ Optimization Decision Framework (GODF)**:
 
 ## Architecture
 
-```text
-                          Granulify / GODF
-+------------------------------------------------------------------+
-|                                                                  |
-|  +----------------------+                                        |
-|  |      Ingestion       |                                        |
-|  +----------------------+                                        |
-|  | static_parser.py     |-- Structural Coupling --+              |
-|  | runtime_monitor.py   |-- Runtime Coupling -----+--+           |
-|  | git_analyzer.py      |-- Team Alignment -------+  |           |
-|  +----------------------+                           |            |
-|                                                     v            |
-|  +------------------------------------------------------------+  |
-|  |                    Scoring Engine                         |  |
-|  +------------------------------------------------------------+  |
-|  | DDD Alignment | Technical Coupling | Team Autonomy         |  |
-|  | Relative Variation Index (RVI) | Elasticity | Hybrid Score |  |
-|  +------------------------------------------------------------+  |
-|                                                     |            |
-|                                                     v            |
-|  +------------------------------------------------------------+  |
-|  |                   Decision Analyzer                       |  |
-|  +------------------------------------------------------------+  |
-|  |              SPLIT | MERGE | MAINTAIN                     |  |
-|  +------------------------------------------------------------+  |
-|                                                                  |
-+------------------------------------------------------------------+
-```
+![Granulify GODF Architecture](docs/assets/granulify-architecture.svg)
+
+Granulify moves architecture evidence through a focused pipeline: **Ingestion**
+collects structural, runtime, and organizational signals; the **Scoring Engine**
+computes GODF metrics; and the **Decision Analyzer** emits a formal `SPLIT`,
+`MERGE`, or `MAINTAIN` recommendation.
 
 ### Repository Structure
 
