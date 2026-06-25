@@ -219,44 +219,6 @@ architectural recommendation.
 
 ---
 
-## Project Roadmap
-
-- [x] Define GODF-inspired modular project structure.
-- [x] Add mock structural dependency ingestion.
-- [x] Add mock runtime trace and latency ingestion.
-- [x] Add mock Git authorship and team-boundary analysis.
-- [x] Implement hybrid scoring engine.
-- [x] Implement `SPLIT`, `MERGE`, and `MAINTAIN` recommendation logic.
-- [x] Add runnable ShopFlow simulation.
-- [ ] Add real static analysis using AST/import graph parsing.
-- [ ] Integrate with Jaeger, OpenTelemetry, or Prometheus APIs.
-- [ ] Parse real Git history using repository metadata.
-- [ ] Add YAML/JSON configuration for thresholds and weights.
-- [ ] Export recommendations as JSON, CSV, and architecture reports.
-- [ ] Add automated tests and CI workflows.
-- [ ] Build a visualization dashboard for boundary evolution.
-
----
-
-## Contributors
-
-| Name |
-|---|
-| Basant Awad |
-| Nadira Mohamed |
-| Merna Adel |
-| Ahmed Adel |
-| Mohamed Alsariti |
-| Ahmed Yahia |
-
----
-
-## License
-
-This project is currently prepared with a placeholder **MIT License** badge.
-Add a `LICENSE` file before publishing the repository publicly.
-
----
 
 ## Acknowledgements
 
